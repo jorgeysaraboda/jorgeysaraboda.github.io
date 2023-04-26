@@ -1,0 +1,106 @@
+<html lang="es">
+    <head>
+        <title>Bienvenido</title>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="assets/app.css">
+        <script>
+            function play(auto){
+                const audio = document.getElementById("bgm");
+                audio.muted = false;
+                audio.volume = 0.25;
+                audio.play();
+            }
+            document.addEventListener("DOMContentLoaded", function(event) {
+                if(!(!!window.chrome)){
+                    setInterval(function(){
+                        play();
+                    }, 1000);
+                }
+            });
+            document.onclick = function() {
+                play();
+                document.getElementById('overlay').classList.add('opened')
+            };
+        </script>
+    </head>
+    <body>
+        <audio
+            id="bgm"
+            src="assets/sound/background.mp3"
+            loop="true"
+            autoplay="true"
+            muted
+        ></audio>
+        <div class='card'>
+            <div class='decoration'>
+                <img draggable="false" id='yflowers-r' alt='' src='assets/img/yflowers.png'></img>
+                <img draggable="false" id='yflowers-l' alt='' src='assets/img/yflowers.png'></img>
+                <img draggable="false" id='pflowers' alt='' src='assets/img/pflowers.svg'></img>
+                <img draggable="false" id='ylines' alt='' src='assets/img/ylines.svg'></img>
+                <img draggable="false" id='plines' alt='' src='assets/img/plines.svg'></img>
+            </div>
+            <div class="overlay" id="overlay">
+                <img draggable="false" alt="bow" src="assets/img/gift-bow.png"></img>
+            </div>
+            <div class='content'>
+                <div class="names">
+                    <span id='couple-1'>Jorge</span>
+                    <span id='couple-2'>y</span>
+                    <span id='couple-3'>Sarahi</span>
+                </div>
+                <div class="dates">
+                    <span id='s-day'>SABADO</span>
+                    <div class="fdate">
+                        <span id="n-month">JUN.</span>
+                        <span id="n-day">17</span>
+                        <span id="n-year">2023</span>
+                    </div>
+                    <span id="s-time">6:00 P.M.</span>
+                </div>
+                <div class="text">
+                    <div id="flink">
+                        <p>
+                            CEREMONIA Y<br/>
+                            RECEPCION:<br/>
+                            QUINTA OASIS<br/>
+                            <a href="https://goo.gl/maps/G3JVM1XTZWkCiPHS7">
+                                <span id="fhere">(AQUÍ)</span>
+                            </a>
+                        </p>
+                    </div>
+                    <p id="code">
+                        CÓDIGO DE VESTIMENTA: <span style="color: #CB6EE6">FORMAL</span>
+                    </p>
+                    <p id="warning">
+                        “QUEREMOS QUE DISFRUTES Y BAILEN<br/>
+                        SIN PARAR. POR ELLO QUE LA<br/>
+                        INVITACIÓN ES SOLO PARA ADULTOS”
+                    </p>
+                    <p id="attendance">
+                        CONFIRMA TU ASISTENCIA
+                        <a href="https://wa.me/8113867293">
+                            <span id="fhere">(AQUÍ)</span>
+                        </a>
+                    </p>
+                </div>
+                <a href="https://www.amazon.com.mx/wedding/sarahi-eguia-jorge-curiel-monterrey-june-2023/registry/2P89SPALP75S5">
+                    <div class="gifts">
+                        <div id="litems">
+                            <img draggable="false" id='gift' alt='' src='assets/img/icon-gift.png'></img>
+                            <span>o</span>
+                            <img draggable="false" id='mail' alt='' src='assets/img/icon-mail.png'></img>
+                        </div>
+                        <div id="ritems">
+                            <p>
+                            CARRITO<br/>
+                            DE<br/>
+                            REGALOS
+                            </p>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

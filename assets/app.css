@@ -4,7 +4,7 @@
     src: url('font/Garlicha.ttf');
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
     #yflowers-r {
         top: -40px;

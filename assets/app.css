@@ -22,12 +22,12 @@
 
     #ylines {
         top: 22% !important;
-        height: 150px !important;
+        height: 140px !important;
     }
 
     #plines {
-        height: 0px !important;
-        top: 50% !important;
+        height: 100px !important;
+        top: 43% !important;
         left: 100%;
         transform: translate(-30%, 20%) !important;
     }
@@ -36,6 +36,12 @@
         display: inline-block;
         transform: scale(0.8);
         margin: auto 0;
+    }
+
+    .gifts {
+        bottom: 20px !important;
+        right: 20px !important;
+        transform: scale(0.8);
     }
 
     .dates span {
